@@ -1,0 +1,15 @@
+long long minTime(long long a[], long long b[], long long n)
+    {
+        long long sm1=0,sm2=0;
+        for(int i = 0;i<n;i++){
+            if(i%2==0){
+                sm1+=b[i];
+                sm2+=a[i];
+            } 
+            else{
+                sm1+=a[i];
+                sm2+=b[i];
+            } 
+        }
+        return min(sm1,sm2);
+    }
